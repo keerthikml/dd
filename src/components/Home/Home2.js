@@ -1,112 +1,105 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/keerthik.jpg";
+import myImg from "../../Assets/Keerthik portfolio image.jpg";
 import Tilt from "react-parallax-tilt";
-import {
-  AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
-} from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { DiCode, DiNodejs } from "react-icons/di";
+import { SiSpringboot, SiReact, SiMysql, SiDocker, SiNginx, SiFirebase } from "react-icons/si";
+import { FaBolt, FaCloud, FaServer } from "react-icons/fa";
 
 function Home2() {
   return (
-    <Container fluid className="home-about-section" id="about">
+    <Container fluid className="what-i-do-section" id="what-i-do">
       <Container>
         <Row>
-          <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+          <Col md={12} className="text-center">
+            <h1 className="what-i-do-heading" data-aos="fade-up">
+              What I <span className="purple">Do</span>
             </h1>
-            <p className="home-about-body">
-              I am a <b className="purple">Backend Engineer</b> with 1+ year of
-              experience building scalable web applications.
-              <br />
-              <br />
-              I specialize in backend development using{" "}
-              <b className="purple">Java Spring Boot</b> and{" "}
-              <b className="purple">Node.js</b>, designing secure{" "}
-              <b className="purple">REST APIs</b>, authentication systems, and{" "}
-              <b className="purple">role-based access control (RBAC)</b>.
-              <br />
-              <br />
-              I have worked on real-world systems like <b className="purple">HRMS</b>{" "}
-              platforms with modules such as employee onboarding, GPS-based
-              attendance, leave management workflows, and real-time chat.
-              <br />
-              <br />
-              I also build real-time features using{" "}
-              <b className="purple">WebSocket</b> and{" "}
-              <b className="purple">Firebase Cloud Messaging (FCM)</b> for
-              notifications.
-              <br />
-              <br />
-              In addition to backend work, I use <b className="purple">React.js</b>{" "}
-              for frontend development when needed, and I deploy applications on{" "}
-              <b className="purple">Linux</b> servers using{" "}
-              <b className="purple">Docker</b>, <b className="purple">NGINX</b>, and{" "}
-              <b className="purple">PM2</b>.
-            </p>
-          </Col>
-          <Col md={4} className="myAvtar">
-            <Tilt>
-              <img src={myImg} className="img-fluid" alt="keerthik" />
-            </Tilt>
           </Col>
         </Row>
-        
-        
-
-
-
-        <Row>
-          <Col md={12} className="home-about-social">
-            <h1>FIND ME ON</h1>
-            <p>
-              Feel free to <span className="purple">connect </span>with me
-            </p>
-            <ul className="home-about-social-links">
-              <li className="social-icons">
-                <a
-                  href="https://github.com/keerthikml"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://twitter.com/MlKeerthik?t=_SroC8bZoAyycmYQwH5zCQ&s=09"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/keerthik-ml-8856a6253/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://instagram.com/keerthik_ml?igshid=MzNlNGNkZWQ4Mg=="
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
-                </a>
-              </li>
-            </ul>
+        <Row className="align-items-start">
+          <Col md={4} lg={4} className="what-i-do-image-col" data-aos="fade-right">
+            <div className="profile-section-wrapper">
+              <div className="what-i-do-image-wrapper">
+                <Tilt>
+                  <img src={myImg} className="what-i-do-image" alt="keerthik" />
+                </Tilt>
+              </div>
+              <div className="profile-tagline" data-aos="fade-up" data-aos-delay="200">
+                <p className="tagline-text">
+                  "Building robust backend systems that power seamless user experiences."
+                </p>
+              </div>
+              <div className="profile-description" data-aos="fade-up" data-aos-delay="250">
+                <p className="tagline-subtext">
+                  Passionate about clean code, scalable architecture, and solving complex problems.
+                </p>
+              </div>
+            </div>
+          </Col>
+          <Col md={8} lg={8} className="what-i-do-content" data-aos="fade-left">
+            <Row className="capability-cards-row">
+              <Col md={6} className="capability-card-col" data-aos="fade-up" data-aos-delay="0">
+                <div className="capability-card">
+                  <div className="capability-icon">
+                    <FaServer size={36} />
+                  </div>
+                  <h3 className="capability-title">Backend Development</h3>
+                  <p className="capability-description">
+                    Build scalable REST APIs and backend services using Spring Boot and Node.js.
+                  </p>
+                  <div className="capability-tech-icons">
+                    <SiSpringboot size={20} className="tech-icon-wrapper" />
+                    <DiNodejs size={20} className="tech-icon-wrapper" />
+                  </div>
+                </div>
+              </Col>
+              <Col md={6} className="capability-card-col" data-aos="fade-up" data-aos-delay="100">
+                <div className="capability-card">
+                  <div className="capability-icon">
+                    <DiCode size={36} />
+                  </div>
+                  <h3 className="capability-title">Full Stack Applications</h3>
+                  <p className="capability-description">
+                    Develop complete web applications using React, Spring Boot, and MySQL.
+                  </p>
+                  <div className="capability-tech-icons">
+                    <SiReact size={20} className="tech-icon-wrapper" />
+                    <SiSpringboot size={20} className="tech-icon-wrapper" />
+                    <SiMysql size={20} className="tech-icon-wrapper" />
+                  </div>
+                </div>
+              </Col>
+              <Col md={6} className="capability-card-col" data-aos="fade-up" data-aos-delay="200">
+                <div className="capability-card">
+                  <div className="capability-icon">
+                    <FaBolt size={36} />
+                  </div>
+                  <h3 className="capability-title">Real-Time Systems</h3>
+                  <p className="capability-description">
+                    Implement real-time features using WebSocket and Firebase Cloud Messaging (FCM).
+                  </p>
+                  <div className="capability-tech-icons">
+                    <SiFirebase size={20} className="tech-icon-wrapper" />
+                  </div>
+                </div>
+              </Col>
+              <Col md={6} className="capability-card-col" data-aos="fade-up" data-aos-delay="300">
+                <div className="capability-card">
+                  <div className="capability-icon">
+                    <FaCloud size={36} />
+                  </div>
+                  <h3 className="capability-title">DevOps & Deployment</h3>
+                  <p className="capability-description">
+                    Deploy applications using Docker, NGINX, Linux VPS, and PM2.
+                  </p>
+                  <div className="capability-tech-icons">
+                    <SiDocker size={20} className="tech-icon-wrapper" />
+                    <SiNginx size={20} className="tech-icon-wrapper" />
+                  </div>
+                </div>
+              </Col>
+            </Row>
           </Col>
         </Row>
       </Container>

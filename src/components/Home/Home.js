@@ -1,30 +1,45 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import homeLogo from "../../Assets/design-home.png";
+import { Link } from "react-router-dom";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import { motion } from "framer-motion";
 
 function Home() {
   return (
     <section>
-      <Container fluid className="home-section" id="home">
-        <Particle />
-        <Container className="home-content">
-          <Row>
-            <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        <Container fluid className="home-section" id="home">
+          <Particle />
+          <Container className="home-content">
+            <Row className="justify-content-center align-items-center">
+              <Col md={8} className="home-header text-center">
+                <h1
+                  style={{ paddingBottom: 15 }}
+                  className="heading"
+                  data-aos="fade-down"
+                >
                 Hi There <span className="wave">👋</span>
               </h1>
 
-              <h1 className="heading-name">
+              <h1 className="heading-name" data-aos="fade-down" data-aos-delay="100">
                 <span style={{ marginRight: 10 }}>I&apos;M</span>
                 <strong className="main-name">KEERTHIK M L</strong>
               </h1>
 
               <div
                 className="home-hero-subtitle"
-                style={{ paddingTop: 12, paddingBottom: 12, textAlign: "left" }}
+                style={{
+                  paddingTop: 16,
+                  paddingBottom: 16,
+                }}
+                data-aos="fade-up"
+                data-aos-delay="150"
               >
                 <div style={{ fontSize: "1.05rem", opacity: 0.95 }}>
                   Backend Engineer | Java Spring Boot | Node.js | React
@@ -35,45 +50,46 @@ function Home() {
                 </div>
               </div>
 
-              <div style={{ paddingTop: 14, textAlign: "left" }}>
+              <div
+                style={{ paddingTop: 14 }}
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 <Type />
               </div>
 
               <div
                 className="d-flex flex-wrap align-items-center gap-3"
-                style={{ paddingTop: 18 }}
+                style={{ 
+                  paddingTop: 24, 
+                  justifyContent: "center",
+                  position: "relative",
+                  zIndex: 10
+                }}
+                data-aos="fade-up"
+                data-aos-delay="250"
               >
                 <Button
+                  as={Link}
+                  to="/resume"
                   variant="primary"
-                  href="/resume.pdf"
-                  target="_blank"
-                  rel="noreferrer"
+                  style={{ position: "relative", zIndex: 10, pointerEvents: "auto" }}
                 >
                   View Resume
                 </Button>
-                <Button
-                  variant="outline-light"
-                  href="https://github.com/"
-                  target="_blank"
-                  rel="noreferrer"
+                <a 
+                  href="mailto:keerthiksowthadka@gmail.com" 
+                  className="btn btn-outline-light"
+                  style={{ position: "relative", zIndex: 10, pointerEvents: "auto", textDecoration: "none" }}
                 >
-                  GitHub
-                </Button>
+                  Email Me
+                </a>
               </div>
-            </Col>
-
-            <Col md={5} style={{ paddingBottom: 20 }}>
-              <img
-                src={homeLogo}
-                alt="home pic"
-
-                className="img-fluid"
-                style={{ maxHeight: "450px" }}
-              />
             </Col>
           </Row>
         </Container>
       </Container>
+      </motion.div>
       <Home2 />
     </section>
   );

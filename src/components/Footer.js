@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
+  // AiOutlineTwitter,
+  // AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -31,7 +31,7 @@ function Footer() {
                 <AiFillGithub />
               </a>
             </li>
-            <li className="social-icons">
+            {/* <li className="social-icons">
               <a
                 href="https://twitter.com/MlKeerthik?t=_SroC8bZoAyycmYQwH5zCQ&s=09"
                 style={{ color: "white" }}
@@ -40,10 +40,10 @@ function Footer() {
               >
                 <AiOutlineTwitter />
               </a>
-            </li>
+            </li> */}
             <li className="social-icons">
               <a
-                href="https://www.linkedin.com/in/keerthik-ml-8856a6253/"
+                href="https://www.linkedin.com/in/keerthikml"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -51,7 +51,7 @@ function Footer() {
                 <FaLinkedinIn />
               </a>
             </li>
-            <li className="social-icons">
+            {/* <li className="social-icons">
               <a
                 href="https://instagram.com/keerthik_ml?igshid=MzNlNGNkZWQ4Mg=="
                 style={{ color: "white" }}
@@ -60,7 +60,7 @@ function Footer() {
               >
                 <AiFillInstagram />
               </a>
-            </li>
+            </li> */}
           </ul>
         </Col>
       </Row>

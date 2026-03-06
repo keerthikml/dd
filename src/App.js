@@ -6,7 +6,8 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import {
   BrowserRouter as Router,
@@ -28,6 +29,15 @@ function App() {
     }, 1200);
 
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: false,
+      mirror: true,
+    });
   }, []);
 
   return (
