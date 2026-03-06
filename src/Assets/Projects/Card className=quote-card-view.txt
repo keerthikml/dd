@@ -1,0 +1,54 @@
+ <Card className="quote-card-view">
+      <Card.Body>
+        <blockquote className="blockquote mb-0">
+          <p style={{ textAlign: "justify" }}>
+           
+       
+
+<head>
+  <title>Announcement</title>
+</head>
+<body>
+  <h1>Thrilled to announce!</h1>
+  <p>
+    My team and I secured first place in the major project exhibition for our groundbreaking project 
+    <strong>'Virtual Try On using Augmented Reality and Machine Learning'!</strong> 🏆🚀
+  </p>
+  <p>
+    We developed a cutting-edge shopping web application that revolutionizes the way users try on clothes.
+    With just a click of a button, our app seamlessly blends virtual garments onto the user's body in real-time
+    using augmented reality technology. It was a remarkable journey of combining AR and ML to create an immersive
+    and personalized shopping experience.
+  </p>
+  <p>
+    Grateful for my exceptional teammates who brought their expertise to the table.
+  </p>
+  <p>
+    Stay tuned for more innovations as we continue to push the boundaries of technology!
+  </p>
+  <p>
+    <strong>Hashtags:</strong> 
+    <a href="#">AwardWinningTeam</a>, 
+    <a href="#">VirtualTryOn</a>, 
+    <a href="#">AugmentedReality</a>, 
+    <a href="#">MachineLearning</a>, 
+    <a href="#">Innovation</a>
+  </p>
+</body>
+
+</p>
+
+
+
+
+
+
+ <Nav.Item>
+              <Nav.Link
+                href="https://soumyajitblogs.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
+              </Nav.Link>
+            </Nav.Item>
