@@ -15,20 +15,16 @@ function ProjectCards(props) {
     <>
       <Card className="project-card-view">
         <div className="project-image-container">
-          <Card.Img 
-            variant="top" 
-            src={props.imgPath} 
-            alt="card-img" 
-            className="project-image" 
+          <Card.Img
+            variant="top"
+            src={props.imgPath}
+            alt="card-img"
+            className="project-image"
             onClick={handleShow}
-            onTouchEnd={(e) => {
-              e.preventDefault();
-              handleShow();
-            }}
             style={{ cursor: "pointer" }}
           />
           <div className="project-image-message">
-            Click to show image
+            Tap / Click to view image
           </div>
         </div>
         <Card.Body className="project-card-body">

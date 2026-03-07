@@ -24,8 +24,17 @@ function App() {
   const [load, upadateLoad] = useState(true);
 
   useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+  }, []);
+
+  useEffect(() => {
     const timer = setTimeout(() => {
       upadateLoad(false);
+      requestAnimationFrame(() => {
+        window.scrollTo(0, 0);
+      });
     }, 1200);
 
     return () => clearTimeout(timer);

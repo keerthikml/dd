@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 function Home() {
   return (
-    <section>
+    <section className="home-page-section">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ function Home() {
               </div>
 
               <div
-                style={{ paddingTop: 14 }}
+                className="typing-container"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
@@ -59,9 +59,8 @@ function Home() {
               </div>
 
               <div
-                className="d-flex flex-wrap align-items-center gap-3"
-                style={{ 
-                  paddingTop: 24, 
+                className="d-flex flex-wrap align-items-center gap-3 home-buttons-wrapper"
+                style={{
                   justifyContent: "center",
                   position: "relative",
                   zIndex: 10
